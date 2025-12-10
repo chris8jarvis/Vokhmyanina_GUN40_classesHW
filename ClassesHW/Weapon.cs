@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,6 +9,8 @@ namespace ClassesHW
 {
     internal class Weapon
     {
+        private const int DefaultMinDamage = 1;
+        private const int DefaultMaxDamage = 10;
         public string Name
         {
             get;
@@ -25,18 +28,13 @@ namespace ClassesHW
         {
             get;
         }
-        public Weapon()
-        {
-            Durability = 1f;
-        }
         public Weapon(string name)
         {
             Name = name;
+            Durability = 1f;
         }
         public Weapon(string name, int minDamage, int maxDamage) : this(name)
         {
-            MinDamage = minDamage;
-            MaxDamage = maxDamage;
             SetDamageParams(minDamage, maxDamage);
         }
         public void SetDamageParams(int minDamage, int maxDamage)
@@ -44,24 +42,33 @@ namespace ClassesHW
             if (minDamage > maxDamage)
             {
                 //числа меняются местами
+                int buff = minDamage;
                 minDamage = maxDamage;
-                maxDamage = minDamage;
-                Console.WriteLine($"Incorrect input");
+                maxDamage = buff;
+                Console.WriteLine($"Weapon: {this.Name}. Incorrect input");
             }
-            else if (minDamage < 1)
+
+            if (minDamage < DefaultMinDamage)
             {
                 //минимальный урон оружия задается значением f
-                minDamage = ;
-                Console.WriteLine("Forced setting of the minimum value");
+                minDamage = DefaultMinDamage;
+                Console.WriteLine($"Weapon: {this.Name}. Forced setting of the minimum value to {DefaultMinDamage}");
             }
-            else if (maxDamage <= 1)
+
+            if (maxDamage <= 1)
             {
-                maxDamage = 10;
+                maxDamage = DefaultMaxDamage;
+                Console.WriteLine($"Weapon: {this.Name}. Forced setting of the maximum value to {DefaultMaxDamage}");
             }
+
+            MinDamage = minDamage;
+            MaxDamage = maxDamage;
+
         }
+
         public int GetDamage()
         {
-            return (MaxDamage - MinDamage) / 2;
+            return (MaxDamage + MinDamage) / 2;
         }
     }
 }

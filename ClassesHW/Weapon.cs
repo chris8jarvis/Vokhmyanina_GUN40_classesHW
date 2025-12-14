@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ClassesHW
 {
-    internal class Weapon
+    public class Weapon
     {
         private const int DefaultMinDamage = 1;
         private const int DefaultMaxDamage = 10;

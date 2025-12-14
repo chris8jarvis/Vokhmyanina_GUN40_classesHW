@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace ClassesHW
 {
-    internal class Unit
+    public class Unit
     {
 
         private float _health;

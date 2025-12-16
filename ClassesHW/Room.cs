@@ -8,12 +8,12 @@ namespace ClassesHW
 {
     public struct Room
     {
-        public Unit UnitInstance;
-        public Weapon WeaponInstance;
+        public Unit Unit;
+        public Weapon Weapon;
 
         public Room(Unit u, Weapon w) {
-            UnitInstance = u;
-            WeaponInstance = w;
+            Unit = u;
+            Weapon = w;
         }
     }
 }

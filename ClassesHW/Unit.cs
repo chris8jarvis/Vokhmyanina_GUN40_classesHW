@@ -21,10 +21,12 @@ namespace ClassesHW
             get { return _health; }
         }
 
-        public int Damage
-        {
-            get;
-        }
+        public Interval Damage;
+
+        //public int Damage
+        //{
+        //    get;
+        //}
         public float Armor
         {
             get;
@@ -55,7 +57,7 @@ namespace ClassesHW
         public Unit()
         {
             Name = "Unknown Unit";
-            Damage = 5;
+            Damage = new Interval(0, 10);
             Armor = 0.6f;
             _health = 100;
         }
@@ -63,6 +65,11 @@ namespace ClassesHW
         public Unit(string name) :this()
         {
             Name = name;
+        }
+
+        public Unit(string name, int minDamage, int maxDamage) : this(name)
+        {
+            this.Damage = new Interval(minDamage, maxDamage);
         }
 
         public float GetRealHealth()

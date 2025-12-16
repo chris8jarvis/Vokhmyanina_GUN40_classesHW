@@ -58,6 +58,8 @@ namespace ClassesHW
             {
                 maxValue = DefaultMaxValue;
             }
+            Min = minValue; 
+            Max = maxValue;
         }
     }
 }

@@ -31,29 +31,6 @@ namespace ClassesHW
         {
             get;
         }
-
-        // конструкторы
-        // solution #1 - the best one.
-        //public Unit(string name = "Unknown Unit")
-        //{
-        //    Name = name;
-        //    Damage = 5;
-        //    Armor = 0.6f;
-        //    _health = 100;
-        //}
-
-        // solution #2 - according blue prints.
-        //public Unit() : this("Unknown Unit") {}
-        //public Unit(string name)
-        //{
-        //    Name = name;
-        //    Damage = 5;
-        //    Armor = 0.6f;
-        //    _health = 100;
-        //}
-
-
-        // solution #3 - using this, but name rewritten if declared.
         public Unit()
         {
             Name = "Unknown Unit";
@@ -77,17 +54,6 @@ namespace ClassesHW
             return Health * (1f + Armor); // 100(1+0.6)
         }
 
-        //public bool SetDamage(float value)
-        //{ 
-        //    if (Health <= 0f)
-        //    {
-        //        _health = Health - value * Armor;
-        //        return true;
-        //    }
-        //    _health = Health - value * Armor;
-        //    return false;
-           
-        //}
 
         public bool SetDamage(float value)
         {
@@ -99,11 +65,6 @@ namespace ClassesHW
             }
             return false;
         }
-        //public bool SetDamage(float value)
-        //{
-        //    _health = Health - value * Armor;
-        //    return Health <= 0f;
-        //}
 
     }
 

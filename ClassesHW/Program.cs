@@ -42,77 +42,9 @@
             //}
             //////////////////////////////////////////////////////
 
-            //Console.WriteLine("Enter your Weapon name");
-            //string inputWeaponName = Console.ReadLine();
-
-            //Weapon TestWeapon = new Weapon(inputWeaponName);
-            //Console.WriteLine($"Name of your weapon is {TestWeapon.Name}");
-
-            //Console.WriteLine("Set minimum damage");
-            //int inputMinDamage = int.Parse(Console.ReadLine());
-            //Console.WriteLine("Set maximum damage");
-            //int inputMaxDamage = int.Parse(Console.ReadLine());
-
-            //TestWeapon.SetDamageParams(inputMinDamage, inputMaxDamage);
-            //Console.WriteLine($"Min damage: {TestWeapon.Damage.Min}, max damage: {TestWeapon.Damage.Max}");
-
-            //Console.WriteLine($"Weapon: {TestWeapon.Name}. Damage: {TestWeapon.GetDamage()}");
-            ///////////////////////////////////////////////////////////////////////////////////
-
-            //Interval object1 = new Interval(minValue, maxValue);
-            //Console.WriteLine("Set minimum boundary of the interval");
-            //int minValue = int.Parse(Console.ReadLine());
-            //Console.WriteLine($"Your minimum boundary of the interval: {minValue}");
-            //Console.WriteLine();
-            //Console.WriteLine("Set maximum boundary of the interval");
-            //int maxValue = int.Parse(Console.ReadLine());
-            //Console.WriteLine($"Your maximum boundary of the interval: {maxValue}");
-            //Interval object1 = new Interval(minValue, maxValue);
-
-            //Console.WriteLine();
-            //Console.WriteLine($"Random number of min and max numbers: {object1.Get}");
-
-            ////////////////////////////////////////////////////////////////////////////////////////
             
             Dungeon test = new Dungeon();
             test.ShowRooms();
-
-
-            ////////////////////////////////////////////////////////////////////////////////////////
-            //var rand = new Random();
-            //int num = rand.Next(object1.Min, object1.Max);
-            //Console.WriteLine($"{num}");
-
-            //for (int i = 0; i < 300; i++)
-            //{
-            //    Console.WriteLine($"Random number \t {object1.Get}");
-            //}
-
-
-
-
-
-
-
-
-            ///////////////////////////////////////////////////////////////////////////////
-            //Unit object1 = new Unit();
-            //Console.WriteLine(object1.Name);
-
-            //Console.WriteLine(object1.Damage);
-            //Console.WriteLine(object1.Health);
-            //Console.WriteLine(object1.Armor);
-
-            //Console.WriteLine(object1.GetRealHealth());
-            //Console.WriteLine(object1.SetDamage(200f));
-
-
-
-            //Unit object2 = new Unit("Foo");
-            //Console.WriteLine(object2.Name);
-            //Console.WriteLine(object2.Damage);
-            //Console.WriteLine(object2.Health);
-            //Console.WriteLine(object2.Armor);
 
         }
     }

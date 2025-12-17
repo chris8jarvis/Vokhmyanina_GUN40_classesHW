@@ -17,14 +17,6 @@ namespace ClassesHW
         }
         public Interval Damage;
 
-        //public int MinDamage
-        //{
-        //    get; private set;
-        //}
-        //public int MaxDamage
-        //{
-        //    get; private set;
-        //}
 
         public float Durability
         {
@@ -41,27 +33,6 @@ namespace ClassesHW
         }
         public void SetDamageParams(int minDamage, int maxDamage)
         {
-            //if (minDamage > maxDamage)
-            //{
-            //    //числа меняются местами
-            //    int buff = minDamage;
-            //    minDamage = maxDamage;
-            //    maxDamage = buff;
-            //    Console.WriteLine($"Weapon: {this.Name}. Incorrect input");
-            //}
-
-            //if (minDamage < DefaultMinDamage)
-            //{
-            //    //минимальный урон оружия задается значением f
-            //    minDamage = DefaultMinDamage;
-            //    Console.WriteLine($"Weapon: {this.Name}. Forced setting of the minimum value to {DefaultMinDamage}");
-            //}
-
-            //if (maxDamage <= 1)
-            //{
-            //    maxDamage = DefaultMaxDamage;
-            //    Console.WriteLine($"Weapon: {this.Name}. Forced setting of the maximum value to {DefaultMaxDamage}");
-            //}
 
             this.Damage = new Interval(minDamage, maxDamage);
 

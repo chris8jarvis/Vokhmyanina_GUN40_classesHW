@@ -62,21 +62,18 @@
             var studentsBook = new Dictionary<string, int>();
             studentsBook.Add(studentName, studentGrade);
 
-            //Console.WriteLine("Input student name to find grade");
-            //string studentNameGrade = Console.ReadLine();
-            var studentNameExists = studentsBook.ContainsKey(studentName);
-            bool doesStudentExist = false;
-            while (!doesStudentExist)
-            {
-                Console.WriteLine("Input student name to find grade");
-                string studentName1 = Console.ReadLine();
-                if (int.TryParse(studentName1, out studentNameExists))
-                {
-                    doesStudentExist = true;
-                }
-            }
-            Console.WriteLine($"Student {studentName} has grade {studentGrade}");
+            Console.WriteLine("Input student name to find grade:");
+            string searchName = Console.ReadLine();
 
+            if (studentsBook.ContainsKey(searchName))
+            {
+                int foundGrade = studentsBook[searchName];
+                Console.WriteLine($"Student {searchName} has grade {foundGrade}");
+            }
+            else
+            {
+                Console.WriteLine($"Error: Student '{searchName}' does not exist in the list.");
+            }
         } 
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic;
+using System.Diagnostics;
 using System.Text;
 
 namespace ClassesHW
@@ -45,6 +46,11 @@ namespace ClassesHW
             string[] strings = new string[] { "test", "task5" };
             StringBuilder test = MakeSentence(strings);
             Console.WriteLine(test.ToString());
+
+            Console.WriteLine();
+            Console.WriteLine("6 task.");
+            string result = ReplaceWords("Hello world", "world", "universe");
+            Console.WriteLine(result);
         }
 
         static string ConcatenateStrings(string input1, string input2)
@@ -88,6 +94,11 @@ namespace ClassesHW
                 
             }   
             return builder;
+        }
+
+        static string ReplaceWords(string inputString, string wordToReplace, string replacementWord)
+        {
+            return inputString.Replace(wordToReplace, replacementWord);
         }
 
     }

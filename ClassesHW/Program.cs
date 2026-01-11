@@ -96,7 +96,7 @@ namespace ClassesHW
             return builder;
         }
 
-        static string ReplaceWords(string inputString, string wordToReplace, string replacementWord)
+        static string ReplaceWords(string inputString, string wordToReplace, string replacementWord)// => inputString.Replace(wordToReplace, replacementWord);
         {
             return inputString.Replace(wordToReplace, replacementWord);
         }

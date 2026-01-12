@@ -32,14 +32,14 @@ namespace ClassesHW
             Console.WriteLine();
             Console.WriteLine("Write a word:");
             string input = Console.ReadLine();
-            StringInformation(input);
+            Console.WriteLine(StringInformation(input));
 
             Console.WriteLine();
             Console.WriteLine("4 task first five symbols of a string.");
             Console.WriteLine();
             Console.WriteLine("Write a word:");
             string symbols = Console.ReadLine();
-            FirstFiveSymbols(symbols);
+            Console.WriteLine(FirstFiveSymbols(symbols));
 
             Console.WriteLine();
             Console.WriteLine("5 task.");
@@ -71,17 +71,19 @@ namespace ClassesHW
             return message;
         }
 
-        static void StringInformation(string input)
+        static string StringInformation(string input)
         {
-            Console.WriteLine(input.Length);
-            Console.WriteLine(input.ToUpper());
-            Console.WriteLine(input.ToLower());
+            return $"Word length is {input.Length}, upper case is {input.ToUpper()}, lower case is {input.ToLower()}";
+
+            //Console.WriteLine(input.Length);
+            //Console.WriteLine(input.ToUpper());
+            //Console.WriteLine(input.ToLower());
         }
 
-        static void FirstFiveSymbols(string symbols)
+        static string FirstFiveSymbols(string symbols)
         {
             var firstFiveSymbols = symbols.Substring(0, 5);
-            Console.WriteLine(firstFiveSymbols);
+            return firstFiveSymbols;
         }
 
         static StringBuilder MakeSentence(string[] strings)

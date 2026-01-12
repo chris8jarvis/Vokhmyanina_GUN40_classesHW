@@ -82,11 +82,16 @@ namespace ClassesHW
 
         static string FirstFiveSymbols(string symbols)
         {
+            if (string.IsNullOrEmpty(symbols) || symbols.Length < 5)
+            {
+                return "Word must contain 5 and more symbols";
+            }
+            
             var firstFiveSymbols = symbols.Substring(0, 5);
             return firstFiveSymbols;
         }
 
-        static StringBuilder MakeSentence(string[] strings)
+            static StringBuilder MakeSentence(string[] strings)
         {
             var builder = new StringBuilder();
 
